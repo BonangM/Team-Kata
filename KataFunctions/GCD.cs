@@ -4,10 +4,11 @@ namespace KataFunctions
 {
   public class Gcd
   {
-    public int[] numbers;
+    public int[] numbers { get; set; }
 
     public int calculateGcd(int[] givenNumbers)
     {
+      givenNumbers = numbers;
       //use Linq's Aggregate function to accumulate the gcd forumla to gcd(a,b,c)= gcd(a,(gcd(b,c))
       return givenNumbers.Aggregate(gcdFormula);
     }
