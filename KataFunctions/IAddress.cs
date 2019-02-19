@@ -5,7 +5,8 @@ using System.Text;
 
 namespace KataFunctions
 {
-  interface IAddress
+  public interface IAddress
   {
+    
   }
 }

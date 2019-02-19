@@ -20,7 +20,6 @@ namespace KataFunctions
       }
     }
 
-   
     public string printAddressFromFile()
     {
       StringBuilder sb = new StringBuilder();
