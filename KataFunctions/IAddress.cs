@@ -7,6 +7,6 @@ namespace KataFunctions
 {
   public interface IAddress
   {
-    
+   
   }
 }
