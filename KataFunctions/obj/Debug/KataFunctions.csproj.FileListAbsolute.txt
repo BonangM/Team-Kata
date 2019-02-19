@@ -1,2 +1,0 @@
-C:\Users\Bonang\Desktop\Investec\Team-Kata\KataFunctions\obj\Debug\KataFunctions.csprojAssemblyReference.cache
-C:\Users\Bonang\Desktop\Investec\Team-Kata\KataFunctions\obj\Debug\KataFunctions.csproj.CoreCompileInputs.cache
