@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
 using System.Text;
-using Newtonsoft.Json;
 
 namespace KataFunctions
 {
@@ -44,46 +41,19 @@ namespace KataFunctions
 
     public string prettyPrint(Address address)
     {
-      string result = null;
 
       StringBuilder sb = new StringBuilder();
-      sb.Append("Type: " + address.type.name);
-      sb.Append("Line Details:" + address.addressLineDetail.line1 + address.addressLineDetail.line2);
+      //string addressDetails = string.Join("",)
+      
+      sb.Append("Type: " + !string.IsNullOrEmpty(address.type.name));
+      sb.Append("Line Details:" + !string.IsNullOrEmpty(address.addressLineDetail.line1 + address.addressLineDetail.line2));
       sb.Append(address.cityOrTown);
       sb.Append(address.provinceOrState.name);
       sb.Append(address.postalCode.ToString());
       sb.Append(address.country.name);
-     
-      return result = sb.ToString();
-    }
-   
-    public string prettyPrintJson()
-    {
-      string result = null;
-      using (StreamReader reader = new StreamReader("addresses.json"))
-      {
-        string json = reader.ReadToEnd();
-        var addresses = JsonConvert.DeserializeObject<List<Address>>(json);
-        foreach (var obj in addresses)
-        {
-          result = prettyPrint(obj);
-            }
-      }
-      
-      return result;
+
+      return sb.ToString();
     }
 
-    public string printAddress(string addressType)
-    {
-      return "print all addresses of type";
-    }
-     
-    //public bool validateAddress(Address address)
-    //{
-
-    //}
   }
-
-
-
 }
