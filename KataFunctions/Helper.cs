@@ -1,33 +1,45 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 using Newtonsoft.Json;
+using System.Linq;
+using System.Text;
 
 namespace KataFunctions
 {
-  //The purpose of this class is to provide some re-usabilty and avoid giving too much methods to the address class
-  public class Helper
+  public abstract class Helper : IAddress
   {
-    
-    public string prettyPrintJson()
+    public List<Address> addresses = new List<Address>();
+
+    public void getAdresses()
     {
-      string result = null;
-      Address address = new Address();
       using (StreamReader reader = new StreamReader("addresses.json"))
       {
         string json = reader.ReadToEnd();
-        var addresses = JsonConvert.DeserializeObject<List<Address>>(json);
-        foreach (var obj in addresses)
-        {
-          result = address.prettyPrint(obj);
-        }
+        addresses = JsonConvert.DeserializeObject<List<Address>>(json);
+        reader.Dispose();
       }
-
-      return result;
     }
 
-    public string printAddress(string addressType)
+   
+    public string printAddressFromFile()
     {
-      return "print all addresses of type";
+      StringBuilder sb = new StringBuilder();
+      addresses.ForEach(a => sb.Append(a.prettyPrint(a)));
+      return sb.ToString();
+      }
+     
+
+    public string printAddress(int addressCode)
+    {
+      StringBuilder sb = new StringBuilder();
+      switch (addressCode)
+      {
+        case 1:
+          addresses.Where(a => a.type.name.Equals(""));
+        
+          break;
+      }
+      return sb.ToString();
     }
 
     //public bool validateAddress(Address address)
