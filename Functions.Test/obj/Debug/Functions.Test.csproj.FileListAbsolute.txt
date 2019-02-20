@@ -17,3 +17,4 @@ C:\Users\Bonang\Desktop\Investec\Team-Kata\Functions.Test\obj\Debug\Functions.Te
 C:\Users\Bonang\Desktop\Investec\Team-Kata\Functions.Test\obj\Debug\Functions.Test.csproj.CopyComplete
 C:\Users\Bonang\Desktop\Investec\Team-Kata\Functions.Test\obj\Debug\Functions.Test.dll
 C:\Users\Bonang\Desktop\Investec\Team-Kata\Functions.Test\obj\Debug\Functions.Test.pdb
+C:\Users\Bonang\Desktop\Investec\Team-Kata\Functions.Test\bin\Debug\packages.config

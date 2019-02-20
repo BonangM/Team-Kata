@@ -22,7 +22,11 @@ namespace WindowsFormsApp1
     private void button1_Click(object sender, EventArgs e)
     {
      List<Address> list = Helper.getAdresses();
-      string test = Helper.printAddress(2);
+      string test = Helper.printAddressFromFile();
+
+      string tester = Helper.printAddress(1);
+
+      string validate = Helper.isValid();
       
     }
   }

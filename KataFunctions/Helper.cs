@@ -51,14 +51,15 @@ namespace KataFunctions
       return sb.ToString();
     }
 
-    public bool isNumeric(string s)
+    public static bool isNumeric(string s)
     {
       int output;
       return int.TryParse(s, out output);
     }
-    public bool validateAddress(Address address)
+
+    public static bool validateAddress(Address address)
     {
-      if (!isNumeric(address.postalCode) && !string.IsNullOrEmpty(address.country.name))
+      if (isNumeric(address.postalCode) && !string.IsNullOrEmpty(address.country.name))
       {
         if (!string.IsNullOrEmpty(address.addressLineDetail.line1) || !string.IsNullOrEmpty(address.addressLineDetail.line2))
         {
@@ -71,12 +72,20 @@ namespace KataFunctions
       return false;
     }
 
-    public string isValid(Address address)
+    public static string isValid()
     {
-      bool result;
-      string message = "";
-      addresses.Where(a => validateAddress(a) == true);
-      return message = "Good job";
+      StringBuilder sb = new StringBuilder();
+      foreach(var address in addresses) {
+      sb.Append(address.prettyPrint(address));
+     if(validateAddress(address) == false)
+      {
+        if (!isNumeric(address.postalCode)) sb.Append( "Postal Code must be numbers");
+        if (string.IsNullOrEmpty(address.country.name)) sb.Append("Country is required");
+        if (string.IsNullOrEmpty(address.addressLineDetail.line1) && string.IsNullOrEmpty(address.addressLineDetail.line2)) sb.Append( "Atleast one address line detail is required");
+        if (address.country.code.Equals("ZA") && string.IsNullOrEmpty(address.provinceOrState.name)) sb.Append( "Province required when Country is South Africa") ;
+      }
+      }
+      return sb.ToString();
     }
   }
 

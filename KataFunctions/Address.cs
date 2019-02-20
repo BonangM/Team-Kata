@@ -44,13 +44,13 @@ namespace KataFunctions
     {
       StringBuilder sb = new StringBuilder();
       try { 
-      sb.Append(address.type.name + ":");
-      sb.Append(address.addressLineDetail.line1 +"-");
-      sb.Append(address.addressLineDetail.line2 +"-");
-      sb.Append(address.cityOrTown + "-");
-      sb.Append(address.provinceOrState.name + "-");
-      sb.Append(address.postalCode + "-");
-      sb.Append(address.country.name);
+      sb.Append(address?.type?.name + ":");
+      sb.Append(address?.addressLineDetail?.line1 +"-");
+      sb.Append(address?.addressLineDetail?.line2 +"-");
+      sb.Append(address?.cityOrTown + "-");
+      sb.Append(address?.provinceOrState?.name + "-");
+      sb.Append(address?.postalCode + "-");
+      sb.Append(address?.country?.name + "|");
       }
       catch (Exception e)
       {
