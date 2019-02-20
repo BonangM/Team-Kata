@@ -22,10 +22,8 @@ namespace WindowsFormsApp1
     private void button1_Click(object sender, EventArgs e)
     {
      List<Address> list = Helper.getAdresses();
-
-      StringBuilder sb = new StringBuilder();
-      list.ForEach(a => sb.Append(a.prettyPrint(a)));
-      string result = sb.ToString();
+      string test = Helper.printAddress(2);
+      
     }
   }
 }

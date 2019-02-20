@@ -23,34 +23,27 @@ namespace KataFunctions
       return addresses;
     }
 
-    public string printAddressFromFile()
+    public static string printAddressFromFile()
     {
       StringBuilder sb = new StringBuilder();
       addresses.ForEach(a => sb.Append(a.prettyPrint(a)));
       return sb.ToString();
       }
 
-    public enum AddressTypeCode {
-      Physical = 1,
-      Postal = 2,
-      Business = 3,
-     
-    }
-
-    public static string printAddress(AddressTypeCode addressCode)
+    public static string printAddress(int addressCode)
     {
       StringBuilder sb = new StringBuilder();
       switch (addressCode)
       {
-        case AddressTypeCode.Physical:
+        case 1:
           addresses.Where(a => a.type.name.Equals("Physical Address")).ToList()
             .ForEach(a => sb.Append(a.prettyPrint(a)));
           break;
-        case AddressTypeCode.Postal:
+        case 2:
           addresses.Where(a => a.type.name.Equals("Postal Address")).ToList()
             .ForEach(a => sb.Append(a.prettyPrint(a)));
           break;
-        case AddressTypeCode.Business:
+        case 3:
           addresses.Where(a => a.type.name.Equals("Business Address")).ToList()
             .ForEach(a => sb.Append(a.prettyPrint(a)));
           break;

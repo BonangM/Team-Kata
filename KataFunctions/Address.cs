@@ -43,15 +43,19 @@ namespace KataFunctions
     public string prettyPrint(Address address)
     {
       StringBuilder sb = new StringBuilder();
-
-      sb.Append(!string.IsNullOrEmpty(address.type.name) + ":");
-      sb.Append(!string.IsNullOrEmpty(address.addressLineDetail.line1)+"-");
-      sb.Append(!string.IsNullOrEmpty(address.addressLineDetail.line2)+"-");
-      sb.Append(!string.IsNullOrEmpty(address.cityOrTown) + "-");
-      sb.Append(!string.IsNullOrEmpty(address.provinceOrState.name)+ "-");
-      sb.Append(!string.IsNullOrEmpty(address.postalCode) + "-");
-      sb.Append(!string.IsNullOrEmpty(address.country.name));
-      
+      try { 
+      sb.Append(address.type.name + ":");
+      sb.Append(address.addressLineDetail.line1 +"-");
+      sb.Append(address.addressLineDetail.line2 +"-");
+      sb.Append(address.cityOrTown + "-");
+      sb.Append(address.provinceOrState.name + "-");
+      sb.Append(address.postalCode + "-");
+      sb.Append(address.country.name);
+      }
+      catch (Exception e)
+      {
+        e.ToString();
+      }
       return sb.ToString();
     }
 
