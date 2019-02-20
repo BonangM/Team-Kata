@@ -1,0 +1,16 @@
+C:\Users\Bonang\Desktop\Investec\Team-Kata\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+C:\Users\Bonang\Desktop\Investec\Team-Kata\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Users\Bonang\Desktop\Investec\Team-Kata\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\Bonang\Desktop\Investec\Team-Kata\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\Bonang\Desktop\Investec\Team-Kata\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\Bonang\Desktop\Investec\Team-Kata\WindowsFormsApp1\bin\Debug\addresses.json
+C:\Users\Bonang\Desktop\Investec\Team-Kata\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\Bonang\Desktop\Investec\Team-Kata\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\Bonang\Desktop\Investec\Team-Kata\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\Bonang\Desktop\Investec\Team-Kata\WindowsFormsApp1\bin\Debug\KataFunctions.dll
+C:\Users\Bonang\Desktop\Investec\Team-Kata\WindowsFormsApp1\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Bonang\Desktop\Investec\Team-Kata\WindowsFormsApp1\bin\Debug\KataFunctions.pdb
+C:\Users\Bonang\Desktop\Investec\Team-Kata\WindowsFormsApp1\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\Bonang\Desktop\Investec\Team-Kata\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
+C:\Users\Bonang\Desktop\Investec\Team-Kata\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\Bonang\Desktop\Investec\Team-Kata\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb

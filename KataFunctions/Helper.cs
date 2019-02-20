@@ -15,7 +15,9 @@ namespace KataFunctions
       using (StreamReader reader = new StreamReader("addresses.json"))
       {
         string json = reader.ReadToEnd();
-        addresses = JsonConvert.DeserializeObject<List<Address>>(json);
+        var settings = new JsonSerializerSettings{NullValueHandling = NullValueHandling.Ignore};
+
+        addresses = JsonConvert.DeserializeObject<List<Address>>(json, settings);
         reader.Dispose();
       }
       return addresses;

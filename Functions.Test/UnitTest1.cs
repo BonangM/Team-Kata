@@ -11,6 +11,8 @@ namespace Functions.Test
     [TestMethod]
     public void TestAddress_PrettyPrint_ReturnsTrue()
     {
+      //Arr
+      
       var address = new Address();
      var result = address.prettyPrint( new Address { cityOrTown = "Johannesburg", postalCode = "100"});
       Assert.IsNotNull(result);

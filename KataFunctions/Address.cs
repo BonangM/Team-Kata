@@ -24,8 +24,8 @@ namespace KataFunctions
 
     public class AddressLineDetail
     {
-      public string line1 { get; set; }
-      public string line2 { get; set; }
+      public string line1 = "";
+      public string line2 = "";
     }
 
     public class ProvinceOrState
@@ -42,18 +42,17 @@ namespace KataFunctions
 
     public string prettyPrint(Address address)
     {
-      var detail = new[] { 
-        address.type.name,":",
-        address.addressLineDetail.line1,"-",
-        address.addressLineDetail.line2,"-",
-        address.cityOrTown, "-",
-        address.provinceOrState.name, "-",
-        address.postalCode, "-",
-        address.country.name
-      };
-      string addressDetails = string.Join(",", detail.Where(s => !string.IsNullOrEmpty(s)));
+      StringBuilder sb = new StringBuilder();
 
-      return addressDetails;
+      sb.Append(!string.IsNullOrEmpty(address.type.name) + ":");
+      sb.Append(!string.IsNullOrEmpty(address.addressLineDetail.line1)+"-");
+      sb.Append(!string.IsNullOrEmpty(address.addressLineDetail.line2)+"-");
+      sb.Append(!string.IsNullOrEmpty(address.cityOrTown) + "-");
+      sb.Append(!string.IsNullOrEmpty(address.provinceOrState.name)+ "-");
+      sb.Append(!string.IsNullOrEmpty(address.postalCode) + "-");
+      sb.Append(!string.IsNullOrEmpty(address.country.name));
+      
+      return sb.ToString();
     }
 
   }
