@@ -55,7 +55,6 @@
     <None Include="addresses.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="packages.config" />
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <None Include="obj\Debug\KataFunctions.csproj.CopyComplete" />
     <None Include="obj\Debug\KataFunctions.csproj.CoreCompileInputs.cache" />
