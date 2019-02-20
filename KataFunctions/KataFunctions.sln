@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KataFunctions", "KataFunctions.csproj", "{67EC9539-1E08-4450-BE94-004856C05A8E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp", "..\..\..\TestApp\TestApp.csproj", "{EAA81A57-A0DC-4E7D-AD4F-D821FDC7C5CE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Functions.Test", "..\Functions.Test\Functions.Test.csproj", "{0D4DA89C-18B0-4836-A13B-DBBC7C13332B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{67EC9539-1E08-4450-BE94-004856C05A8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67EC9539-1E08-4450-BE94-004856C05A8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67EC9539-1E08-4450-BE94-004856C05A8E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EAA81A57-A0DC-4E7D-AD4F-D821FDC7C5CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EAA81A57-A0DC-4E7D-AD4F-D821FDC7C5CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EAA81A57-A0DC-4E7D-AD4F-D821FDC7C5CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EAA81A57-A0DC-4E7D-AD4F-D821FDC7C5CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D4DA89C-18B0-4836-A13B-DBBC7C13332B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D4DA89C-18B0-4836-A13B-DBBC7C13332B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D4DA89C-18B0-4836-A13B-DBBC7C13332B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D4DA89C-18B0-4836-A13B-DBBC7C13332B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

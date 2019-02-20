@@ -75,21 +75,14 @@ namespace KataFunctions
       }
       return false;
     }
-    
-    //public string isValid (Address address)
-    //{
-    //  bool result;
-    //  string message = "";
-    //  foreach (Address address in addresses)
-    //  {
-    //    result = validateAddress(address).ToString();
-    //    if (result == false)
-    //    {
 
-    //    }
-    //    return message ="true"
-    //  }
-    //}
+    public string isValid(Address address)
+    {
+      bool result;
+      string message = "";
+      addresses.Where(a => validateAddress(a) == true);
+      return message = "Good job";
+    }
   }
 
 
