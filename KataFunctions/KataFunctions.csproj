@@ -55,11 +55,28 @@
     <None Include="addresses.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="packages.config" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\KataFunctions.csproj.CopyComplete" />
+    <None Include="obj\Debug\KataFunctions.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\KataFunctions.csprojAssemblyReference.cache" />
+    <None Include="obj\KataFunctions.csproj.nuget.g.props" />
+    <None Include="obj\KataFunctions.csproj.nuget.g.targets" />
+    <None Include="obj\project.assets.json" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json">
       <Version>12.0.1</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="obj\Debug\KataFunctions.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\KataFunctions.dll" />
+    <Content Include="obj\Debug\KataFunctions.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\" />
+    <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
