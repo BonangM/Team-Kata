@@ -98,11 +98,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Bonang\\Desktop\\final\\Team-Kata\\KataFunctions\\KataFunctions.csproj",
+      "projectUniqueName": "C:\\Users\\Bonang\\Desktop\\clone\\Team-Kata\\KataFunctions\\KataFunctions.csproj",
       "projectName": "KataFunctions",
-      "projectPath": "C:\\Users\\Bonang\\Desktop\\final\\Team-Kata\\KataFunctions\\KataFunctions.csproj",
+      "projectPath": "C:\\Users\\Bonang\\Desktop\\clone\\Team-Kata\\KataFunctions\\KataFunctions.csproj",
       "packagesPath": "C:\\Users\\Bonang\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Bonang\\Desktop\\final\\Team-Kata\\KataFunctions\\obj\\",
+      "outputPath": "C:\\Users\\Bonang\\Desktop\\clone\\Team-Kata\\KataFunctions\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [

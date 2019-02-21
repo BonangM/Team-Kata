@@ -60,7 +60,9 @@
     <None Include="obj\Debug\KataFunctions.csproj.CopyComplete" />
     <None Include="obj\Debug\KataFunctions.csproj.CoreCompileInputs.cache" />
     <None Include="obj\Debug\KataFunctions.csprojAssemblyReference.cache" />
-    <None Include="packages.config" />
+    <EmbeddedResource Include="packages.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Content Include="obj\Debug\KataFunctions.csproj.FileListAbsolute.txt" />
