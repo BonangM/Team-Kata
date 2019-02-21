@@ -50,7 +50,6 @@
     <Compile Include="Address.cs" />
     <Compile Include="GCD.cs" />
     <Compile Include="Helper.cs" />
-    <Compile Include="IAddress.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

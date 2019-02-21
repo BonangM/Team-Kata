@@ -3,10 +3,11 @@ using System.IO;
 using Newtonsoft.Json;
 using System.Linq;
 using System.Text;
+using System;
 
 namespace KataFunctions
 {
-  public abstract class Helper : IAddress
+  public abstract class Helper 
   {
     public static List<Address> addresses = new List<Address>();
 
@@ -15,7 +16,7 @@ namespace KataFunctions
       using (StreamReader reader = new StreamReader("addresses.json"))
       {
         string json = reader.ReadToEnd();
-        var settings = new JsonSerializerSettings{NullValueHandling = NullValueHandling.Ignore};
+        var settings = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore };
 
         addresses = JsonConvert.DeserializeObject<List<Address>>(json, settings);
         reader.Dispose();
@@ -28,11 +29,12 @@ namespace KataFunctions
       StringBuilder sb = new StringBuilder();
       addresses.ForEach(a => sb.Append(a.prettyPrint(a)));
       return sb.ToString();
-      }
+    }
 
     public static string printAddress(int addressCode)
     {
       StringBuilder sb = new StringBuilder();
+
       switch (addressCode)
       {
         case 1:
@@ -59,11 +61,16 @@ namespace KataFunctions
 
     public static bool validateAddress(Address address)
     {
+      string a = address.prettyPrint(address);
       if (isNumeric(address.postalCode) && !string.IsNullOrEmpty(address.country.name))
       {
-        if (!string.IsNullOrEmpty(address.addressLineDetail.line1) || !string.IsNullOrEmpty(address.addressLineDetail.line2))
+        if (address.addressLineDetail != null) {
+          if (!string.IsNullOrEmpty(address.addressLineDetail.line1) || !string.IsNullOrEmpty(address.addressLineDetail.line2))
+            return true;
+        }
+        if (address.country.code.Equals("ZA") && (address.provinceOrState != null))
         {
-          if(address.country.code.Equals("ZA") && !string.IsNullOrEmpty(address.provinceOrState.name))
+          if (!string.IsNullOrEmpty(address.provinceOrState.name))
           {
             return true;
           }
@@ -75,20 +82,36 @@ namespace KataFunctions
     public static string isValid()
     {
       StringBuilder sb = new StringBuilder();
-      foreach(var address in addresses) {
-      sb.Append(address.prettyPrint(address));
-     if(validateAddress(address) == false)
-      {
-        if (!isNumeric(address.postalCode)) sb.Append( "Postal Code must be numbers");
-        if (string.IsNullOrEmpty(address.country.name)) sb.Append("Country is required");
-        if (string.IsNullOrEmpty(address.addressLineDetail.line1) && string.IsNullOrEmpty(address.addressLineDetail.line2)) sb.Append( "Atleast one address line detail is required");
-        if (address.country.code.Equals("ZA") && string.IsNullOrEmpty(address.provinceOrState.name)) sb.Append( "Province required when Country is South Africa") ;
-      }
+      foreach (var address in addresses) {
+
+        string a = address.prettyPrint(address);
+        sb.Append(a);
+        string[] array = a.Split( '-',':');
+        //0:type 1:line1 2:line2 3.city 4:province 5:postalcode 6:country
+        if (validateAddress(address) == false)
+        {
+          if (!isNumeric(array[5])) sb.Append("Postal Code must be numbers|");
+          if (string.IsNullOrEmpty(array[5])) sb.Append("Country is required|");
+          if (address.addressLineDetail == null) sb.Append("Line Detail not in file|");
+          if (address.addressLineDetail != null)
+          {
+            if (string.IsNullOrEmpty(array[1]) && string.IsNullOrEmpty(array[2])) sb.Append("Atleast one address line detail is required|");
+          }
+          if (address.country.code.Equals("ZA"))
+          {
+            if (address.provinceOrState != null)
+            {
+              if (string.IsNullOrEmpty(address.provinceOrState.name)) sb.Append("Province required when Country is South Africa");
+            }
+            sb.Append("Province not in file|");
+          }
+        }
+        sb.Append("ValidAddress|");
       }
       return sb.ToString();
     }
+
+
   }
-
-
 }
 

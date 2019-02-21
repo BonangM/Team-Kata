@@ -24,7 +24,7 @@ namespace WindowsFormsApp1
      List<Address> list = Helper.getAdresses();
       string test = Helper.printAddressFromFile();
 
-      string tester = Helper.printAddress(1);
+      string tester = Helper.printAddress(3);
 
       string validate = Helper.isValid();
       
